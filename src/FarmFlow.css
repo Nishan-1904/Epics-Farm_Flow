@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.farmflow-container {
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    background: #b8b6b68a;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  .nav-links a:hover{
+      color: rgb(69, 103, 167);
+      /* font-weight: bolder; */
+  }
+  
+  .login-button {
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .hero-section {
+    position: relative;
+    text-align: center;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  .button-group button {
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .primary-button {
+    background-color: rgb(40, 171, 40);
+    color: white;
+  }
+  
+  .secondary-button {
+    background-color: gray;
+    color: white;
+  }
+  
+  .features-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background: #76f876;
+  }
+  
+  .feature-box {
+    background: white;
+    padding: 40px;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .footer {
+    background: black;
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .social-icons {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    color: white;
+    margin: 0 10px;
+  }
+  
+  /* FarmFlow.css */
+
+/* FarmFlow.css */
+
+.why-rainwater-section {
+    position: relative;
+    text-align: center;
+    /* background-color: rgba(144, 238, 144, 0.75); */
+    /* padding: 1rem; */
+  }
+  
+  .why-rainwater-section img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+  
+  .why-rainwater-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(144, 238, 144, 0.75);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .why-rainwater-content h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .why-rainwater-content ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .why-rainwater-content li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .why-rainwater-content i {
+    color: green;
+    margin-right: 0.5rem;
+  }
+  
+  .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 4; */
+  }
+
+  .register{
+    margin: 8px;
+  }
+
+.login-button:hover{
+ background-color: #62f562;
+ color: white;
+}
+
+/* .login-button :hover{
+  background-color: #62f562;
+ color: white;
+} */
+
+.login-button a{
+  color: rgb(13, 188, 33);
+  text-decoration: none;
+}

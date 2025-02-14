@@ -1,0 +1,141 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4caf50;
+  }
+  
+  /* Container styling */
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Header styles */
+  .header {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .brand-name {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .auth-buttons button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .register-btn {
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .login-btn {
+    background-color: white;
+    color: #4caf50;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+  }
+  
+  /* Main content */
+  .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+  }
+  
+  .login-box {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+  }
+  
+  .login-image {
+    width: 50%;
+    object-fit: cover;
+  }
+  
+  .login-form-container {
+    width: 50%;
+    padding: 20px;
+    background: linear-gradient(to bottom, #d32f2f, #b71c1c);
+    color: white;
+  }
+  
+  .login-title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .input-group {
+    margin-bottom: 10px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .forgot-password a {
+    color: white;
+    text-decoration: underline;
+  }
+  
