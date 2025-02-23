@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LoginPage.css"; // Add a CSS file for styling
 
 const LoginPage = () => {
@@ -54,12 +55,15 @@ const LoginPage = () => {
                   placeholder="Password *"
                 />
               </div>
-              <button type="submit" className="submit-btn">Login</button>
             </form>
+            <div className="submit">
+
+              <button type="submit" className="submit-btn">Login</button>
+            </div>
             <div className="forgot-password">
               <a href="#">Forgot password?</a>
               <p>
-                Don't have an account? <a href="#">Register</a>
+                Don't have an account? <Link to="/Register">Register</Link>
               </p>
             </div>
           </div>

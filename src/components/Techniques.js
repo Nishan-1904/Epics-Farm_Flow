@@ -4,11 +4,12 @@ import "./Techniques.css";
 import ContactUs from "./ContactUs";
 import Techniques from "./Techniques";
 import UserInfo from "./UserInfo";
+import BlogPage from "./blog";
 
 const App = () => {
-    return (
-        <div className="farmflow-container">
-            {/* <header className="header">
+  return (
+    <div className="farmflow-container">
+      {/* <header className="header">
                 <div className="logo-container">
                     <img
                         src="https://storage.googleapis.com/a1aa/image/e2XN3HUana_w7cxaKaS-T5-VpM5YsgKTwGgUsWhOijk.jpg"
@@ -26,39 +27,40 @@ const App = () => {
                 <button className="login-button">Login</button>
             </header> */}
 
-            {/* Routes Section */}
-            <Routes>
-                <Route path="/techniques" element={<Techniques />} />
-                <Route path="/userinfo" element={<UserInfo />} />
-                <Route path="/contactus" element={<ContactUs />} />
-                {/* Default Home Page */}
-                <Route
-                    path="/"
-                    element={
-                        <MainContent />
-                    }
-                />
-            </Routes>
+      {/* Routes Section */}
+      <Routes>
+        <Route path="/techniques" element={<Techniques />} />
+        <Route path="/userinfo" element={<UserInfo />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/blog" element={<BlogPage />} />
 
-            {/* Footer */}
-            {/* <Footer /> */}
-        </div>
-    );
+        {/* Default Home Page */}
+        <Route path="/" element={<MainContent />} />
+      </Routes>
+
+      {/* Footer */}
+      {/* <Footer /> */}
+    </div>
+  );
 };
 
 // Extracting Main Content to prevent duplicate rendering
 const MainContent = () => {
-    return (
-        <main className="main-section">
-            <h1 className="main-title">Rain Water Harvesting Techniques</h1>
-            <p className="subtitle">"Discover methods tailored to your needs"</p>
-            <div className="search-bar">
-                <input type="text" placeholder="Search Techniques" className="search-input" />
-                <button className="search-btn">
-                    <i className="fas fa-search"></i>
-                </button>
-            </div>
-            <div className="filter-options">
+  return (
+    <main className="main-section">
+      <h1 className="main-title">Rain Water Harvesting Techniques</h1>
+      <p className="subtitle">"Discover methods tailored to your needs"</p>
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search Techniques"
+          className="search-input"
+        />
+        <button className="search-btn">
+          <i className="fas fa-search"></i>
+        </button>
+      </div>
+      {/* <div className="filter-options">
                 <select className="filter-select">
                     <option>Location</option>
                 </select>
@@ -68,25 +70,36 @@ const MainContent = () => {
                 <select className="filter-select">
                     <option>Farm Area</option>
                 </select>
-                <button className="submit-btn">Submit</button>
-            </div>
+                <button className="submit-btn" style={{ width: "150px", padding: "8px" }}>Submit</button>
+            </div> */}
 
-            {/* Recommendations Section */}
-            <section className="recommendations-section">
-                <h2 className="recommendations-title">Recommendations based on your input</h2>
-                <div className="recommendations-list">
-                    {recommendations.map((item, index) => (
-                        <div key={index} className="recommendation-item">
-                            <img src={item.image} alt={item.title} className="recommendation-image" />
-                            <h3 className="recommendation-title">{item.title}</h3>
-                            <p className="recommendation-description">{item.description}</p>
-                            <a href="#" className="learn-more">Learn More</a>
-                        </div>
-                    ))}
-                </div>
-            </section>
-        </main>
-    );
+      {/* Recommendations Section */}
+      <section className="recommendations-section">
+        <h2 className="recommendations-title" style={{ fontSize: "28px" }}>
+          Recommendations based on your input
+        </h2>
+        <div
+          className="recommendations-list"
+          style={{ display: "flex", gap: "100px", flexWrap: "wrap" }}
+        >
+          {recommendations.map((item, index) => (
+            <div key={index} className="recommendation-item">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="recommendation-image"
+              />
+              <h3 className="recommendation-title">{item.title}</h3>
+              <Link to="./blog" className="learn-more">
+                Learn More
+              </Link>
+              <p className="recommendation-description">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
 };
 
 // Extracting Footer
@@ -126,21 +139,26 @@ const MainContent = () => {
 
 // Recommendations Data
 const recommendations = [
-    {
-        title: "Contour Bunding",
-        image: "https://storage.googleapis.com/a1aa/image/LXgNJXH-a5cciUZufzP__iEq4_o4qRjNBft9bNwIwM8.jpg",
-        description: "Embankments constructed along the contours of sloping land."
-    },
-    {
-        title: "Rooftop Rainwater Harvesting",
-        image: "https://storage.googleapis.com/a1aa/image/dbW-kGQuBpvNgu6VIcJM20PvJEk3k0V_K2FegshVkzY.jpg",
-        description: "Collects rainwater from rooftops and channels it into storage tanks, reservoirs, or recharge pits."
-    },
-    {
-        title: "Check dams",
-        image: "https://storage.googleapis.com/a1aa/image/K6NIx94pFyd7eQYr8lJJU-xJVLzttihS7UOpiVWwCEc.jpg",
-        description: "Small barriers built across streams or drainage channels to capture and store rainwater."
-    }
+  {
+    title: "Contour Bunding",
+    image:
+      "https://storage.googleapis.com/a1aa/image/LXgNJXH-a5cciUZufzP__iEq4_o4qRjNBft9bNwIwM8.jpg",
+    description: "Embankments constructed along the contours of sloping land.",
+  },
+  {
+    title: "Rooftop Rainwater ",
+    image:
+      "https://storage.googleapis.com/a1aa/image/dbW-kGQuBpvNgu6VIcJM20PvJEk3k0V_K2FegshVkzY.jpg",
+    description:
+      "Collects rainwater from rooftops and channels it into storage tanks, reservoirs, or recharge pits.",
+  },
+  {
+    title: "Check dams",
+    image:
+      "https://storage.googleapis.com/a1aa/image/K6NIx94pFyd7eQYr8lJJU-xJVLzttihS7UOpiVWwCEc.jpg",
+    description:
+      "Small barriers built across streams or drainage channels to capture and store rainwater.",
+  },
 ];
 
 export default App;

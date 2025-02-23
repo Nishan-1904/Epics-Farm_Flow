@@ -8,11 +8,16 @@
   }
   
   .header {
-    background: #b8b6b68a;
+    background: linear-gradient(to right, #FFFFFF 11%, #7D7E7E 76%, #131516 100%);
     padding: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
   }
   
   .logo-container {
@@ -44,17 +49,40 @@
   }
   
   .login-button {
+    font-size: 18px; /* Increased font size */
+  padding: 12px 24px; /* Increased padding */
     background-color: green;
     color: white;
+    border-radius: 8px;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
   }
-  
+  .heroImage {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fully covers the div */
+    position: absolute; /* Makes sure it fills the entire container */
+    top: 0;
+    left: 0;
+}
+
   .hero-section {
     position: relative;
     text-align: center;
+    /* margin-top: 30px; */
   }
   
   .hero-image {
@@ -93,13 +121,22 @@
     display: flex;
     justify-content: space-around;
     padding: 50px;
-    background: #76f876;
+    background: #36A142;
   }
   
+  .feature-box p {
+    font-size: 1.2rem; /* Adjust the size as needed */
+    font-weight: bold;
+}
+
+.feature-box p:first-of-type {
+    font-size: 2rem; /* Specifically increasing the emoji size */
+}
   .feature-box {
     background: white;
     padding: 40px;
     width: 220px;
+    height: 200px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -141,7 +178,38 @@
     /* background-color: rgba(144, 238, 144, 0.75); */
     /* padding: 1rem; */
   }
-  
+  .Why-rainwater-Image {
+    width: 100%;
+    height: 400px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.Why-rainwater-Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fully covers the div */
+    position: absolute; /* Stretches the image inside the div */
+    top: 0;
+    left: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Why-rainwater-Image {
+        height: 300px; /* Adjust height for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .Why-rainwater-Image {
+        height: 220px; /* Adjust height for mobile */
+    }
+}
+
   .why-rainwater-section img {
     width: 100%;
     height: 400px;
@@ -197,7 +265,8 @@
   }
 
   .register{
-    margin: 8px;
+    margin-left: 8px;  /* Space to the left */
+    margin-right: 24px; /* Increased space to the right */
   }
 
 .login-button:hover{
@@ -213,4 +282,16 @@
 .login-button a{
   color: rgb(13, 188, 33);
   text-decoration: none;
+}
+
+.nav-links a[href='/contactus'] {
+  cursor: pointer;
+}
+
+.nav-links a[href='/contactus']:hover {
+  text-decoration: underline;
+}
+
+.nav-links a[href='/contactus'] {
+  scroll-behavior: smooth;
 }

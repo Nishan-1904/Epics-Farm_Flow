@@ -1,5 +1,5 @@
 body {
-    background-color: #4caf50;
+    background-color: #36A142;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -14,7 +14,8 @@ body {
   }
   
   .header {
-    background-color: #e0e0e0;
+    /* background-color: #e0e0e0; */
+    background: linear-gradient(to left, #FFFFFF 11%, #7D7E7E 76%, #131516 100%);
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -73,7 +74,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    /* width: 100%; */
     max-width: 400px;
   }
   
@@ -112,7 +113,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    width: 100px;
   }
   
   .submit-btn:hover {
